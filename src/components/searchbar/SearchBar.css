@@ -1,0 +1,124 @@
+.SearchBar{
+    height: 5vh;
+    width: 50vw;
+    background-color: white;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    border-radius: 25px;
+    -webkit-box-shadow: 8px 8px 6px -1px rgba(0,0,0,0.24);
+    -moz-box-shadow: 8px 8px 6px -1px rgba(0,0,0,0.24);
+    box-shadow: 8px 8px 6px -1px rgba(0,0,0,0.24);
+}
+input{
+    border: none;
+    outline: none;
+}
+input:focus{
+    border: none;
+    outline: none;
+}
+.SearchBar_input{
+    height: 100%;
+    width: 70%;
+    
+    
+    
+    font-size: 1rem;
+}
+.SearchBar_icon{
+    height: 40px;
+    width: 40px;
+    border-radius: 15%;
+    /* background-color: rgb(15, 63, 255); */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+.SearchBar_icon:hover{
+    height: 50px;
+    width: 50px;
+}
+
+.Data_output{
+    
+    width: 45%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    
+    
+    font-size: 1.2rem;
+    margin-top: 1%;
+    padding: 1%;
+
+    background: white;
+    border-radius: 25px;
+
+    -webkit-box-shadow: 8px 8px 6px -1px rgba(0,0,0,0.24);
+    -moz-box-shadow: 8px 8px 6px -1px rgba(0,0,0,0.24);
+    box-shadow: 8px 8px 6px -1px rgba(0,0,0,0.24);
+
+
+}
+.Data_output_list{
+    margin-left: 2%;
+    padding: 1.2%;
+    
+    text-transform: lowercase;
+
+    border-radius: 25px;
+}
+.Data_output_list:hover{
+    background-color: rgb(235, 235, 235);
+}
+
+.Data_output_addlist{
+
+    position: absolute;
+    width: 45%;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%);
+
+    border-radius: 25px;
+    padding-left: 2%;
+
+
+    color: rgb(89, 89, 89);
+    font-size: 2rem;
+    
+    
+    padding: 5px;
+    padding-left: 70px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plus_icon{
+    background-color: rgb(20, 75, 255);
+    font-size: 2rem;
+    font-weight: 200;
+    width: 40px;
+    margin-right: 7%;
+
+    color: white;
+    border-radius: 5px;
+
+    cursor: cell;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.plus_icon:hover{
+    padding: 0.5%;
+}

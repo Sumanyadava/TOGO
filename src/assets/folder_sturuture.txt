@@ -1,0 +1,7 @@
+All folder name must be small letters 
+
+all file name start with capital
+
+Css BEM naming convention (block element modifier )
+
+variable camelCasing
