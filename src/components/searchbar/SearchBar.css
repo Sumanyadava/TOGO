@@ -1,5 +1,5 @@
 .SearchBar{
-    height: 5vh;
+    height: 7vh;
     width: 50vw;
     background-color: white;
 
@@ -41,8 +41,7 @@ input:focus{
     text-align: center;
 }
 .SearchBar_icon:hover{
-    height: 50px;
-    width: 50px;
+    transform: scale(1.1);
 }
 
 .Data_output{
@@ -103,22 +102,3 @@ input:focus{
     align-items: center;
 }
 
-.plus_icon{
-    background-color: rgb(20, 75, 255);
-    font-size: 2rem;
-    font-weight: 200;
-    width: 40px;
-    margin-right: 7%;
-
-    color: white;
-    border-radius: 5px;
-
-    cursor: cell;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.plus_icon:hover{
-    padding: 0.5%;
-}

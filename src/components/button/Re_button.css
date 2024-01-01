@@ -1,0 +1,19 @@
+.button_temp{
+    background-color: rgb(20, 75, 255);
+    font-size: 2rem;
+    font-weight: 500;
+    width: 40px;
+    margin-right: 7%;
+
+    color: white;
+    border-radius: 5px;
+
+    cursor: cell;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.button_temp:hover{
+    transform: scale(1.1);
+}

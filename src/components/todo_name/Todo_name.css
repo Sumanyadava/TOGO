@@ -1,0 +1,70 @@
+.ToDo_name {
+  height: 70vh;
+  width: 30%;
+
+  border-radius: 12px;
+
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column; */
+
+  background-color: rgb(217,217,217);
+  /* background-color: azure; */
+}
+
+.todo_heading {
+  height: 15%;
+  width: 100%;
+
+  font-size: 25px;
+  border-radius: 12px;
+  color: white;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: rgb(43,43,46);
+}
+.todo_heading_name{
+    height: 80%;
+  width: 70%;
+
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+
+    /* background-color: aqua; */
+}
+.todo_heading_action{
+    height: 80%;
+  width: 20%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+
+  
+
+    
+}
+
+/* ------------------ */
+.todo_content{
+    height: 80%;
+  width: 100%;
+
+  padding-top: 5%;
+
+  overflow-y: scroll;
+
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+}
+.todo_content::-webkit-scrollbar{
+    display: none;
+}
+
+

@@ -1,0 +1,47 @@
+.Sub_todo{
+    height: 12%;
+    width: 95%;
+
+    /* background-color: rgb(240, 240, 240); */
+    margin: 2%;
+    
+    font-size: 20px;
+    font-weight: 100;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.Sub_todo_name{
+    height: 100%;
+    width: 70%;
+    border-radius: 12px;
+    background-color: rgb(240, 240, 240);
+
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.Sub_todo_status{
+    height: 100%;
+    width: 20%;
+    /* background-color: azure; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#Status{
+    height: 80%;
+    
+    min-width: fit-content;
+    /* width: 80%;  */
+    
+
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: inherit;
+}
