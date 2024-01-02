@@ -1,8 +1,8 @@
-import React from 'react'
-import './Todo_name.css'
-import Sub_todo from '../sub_todo/Sub_todo'
+import React from 'react';
+import './TodoName.css';
+import Sub_todo from '../sub_todo/SubTodo';
 
-const Todo_name = () => {
+const TodoName = () => {
   return (
     <div className='ToDo_name'>
       <div className="todo_heading">
@@ -20,6 +20,7 @@ const Todo_name = () => {
 
        <Sub_todo />
        <Sub_todo />
+       
        <Sub_todo />
        <Sub_todo />
 
@@ -32,4 +33,4 @@ const Todo_name = () => {
   )
 }
 
-export default Todo_name
+export default TodoName

@@ -1,16 +1,10 @@
 .ToDo_name {
   height: 70vh;
   width: 30%;
+  /* width: max-content; */
 
   border-radius: 12px;
-
-  /* display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column; */
-
   background-color: rgb(217,217,217);
-  /* background-color: azure; */
 }
 
 .todo_heading {
@@ -35,7 +29,6 @@
   justify-content: baseline;
   align-items: center;
 
-    /* background-color: aqua; */
 }
 .todo_heading_action{
     height: 80%;
