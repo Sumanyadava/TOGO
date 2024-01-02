@@ -1,0 +1,18 @@
+.Popup{
+    position: absolute;
+    
+    height: 30vh;
+    width: 100vh;
+    backdrop-filter: blur(5px);
+}
+
+.Popup_message{
+    height: 300px;
+    width: 400px;
+
+    /* background-color: aqua; */
+}
+.Popup_message::backdrop{
+    background: rgb(0, 255, 255);
+}
+/* test dialog in html css */

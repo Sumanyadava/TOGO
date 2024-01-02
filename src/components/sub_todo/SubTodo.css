@@ -10,6 +10,7 @@
 
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .Sub_todo_name{
@@ -17,10 +18,21 @@
     width: 70%;
     border-radius: 12px;
     background-color: rgb(240, 240, 240);
+    
 
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding-left: 2%;
+}
+.Sub_todo_tags{
+    height: 80%;
+    width: 20%;
+    /* background-color: bisque; */
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .Sub_todo_status{
