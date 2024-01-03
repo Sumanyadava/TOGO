@@ -1,0 +1,83 @@
+.SubTodoCreate{
+    height: 15%;
+    width: 100%;
+    background-color: antiquewhite;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    flex-direction: column;
+}
+
+.inp{
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.SubTodoCreate_input{
+    height: 80%;
+    width: 70%;
+    display: flex;
+    font-size: 20px;
+    padding-left: 5%;
+    border-radius: 25px;
+}
+.SubTodoCreate_datepicker{
+    height: 35px;
+    width: 35px;
+
+    font-size: 35px;
+    background: inherit;
+
+}
+
+.tags_create{
+    height: 50%;
+    width: 100%;
+    
+
+    
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    align-items: center;
+}
+.tags_create_tags{
+    height: 80%;
+    width: 100%;
+    
+
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 5%;
+}
+
+
+
+.tags_create_tags > *{
+    margin-left: 5%;
+}
+.deadline{
+    background-color: aqua;
+    margin-left: 15%;
+    padding: 2%;
+    border-radius: 10px;
+
+}
+.SubTodoCreate_add{
+    height: 100%;
+    width: 20%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+

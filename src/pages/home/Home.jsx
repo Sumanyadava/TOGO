@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className='home'>
       <Header />
-      <Popup />
+      {/* <Popup /> */}
       <Main />
     </div>
   )

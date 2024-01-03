@@ -1,0 +1,56 @@
+.PrimaryButton{
+    height: max-content;
+    width: max-content;
+    
+    background-color: rgb(20, 75, 255);
+    color: white;
+
+    border:  solid rgb(20, 75, 255);
+    border-radius: 5px;
+
+
+    padding: 1%;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.PrimaryButton:hover,.SecoundaryButton:hover{
+    transform: scale(1.1);
+}
+
+.SecoundaryButton{
+    height: max-content;
+    width: max-content;
+
+    color: rgb(20, 75, 255);
+
+    padding: 1%;
+
+    border-radius: 5px;
+    border:  solid rgb(20, 75, 255);
+
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: small;
+}
+.CircleButton{
+    background-color: black;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2%;
+    cursor: pointer;
+}

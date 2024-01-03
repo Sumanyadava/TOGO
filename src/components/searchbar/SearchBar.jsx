@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Search_icon from "../../assets/Search_icon";
 import Cross_icon from "../../assets/cross_icon";
-import Re_button from "../button/Re_button";
+import PrimaryButton from "../buttons/PrimaryButton";
 import "./SearchBar.css";
+import SecoundaryButton from "../buttons/SecoundaryButton";
 
 const SearchBar = ({ placeholder, data }) => {
   
@@ -62,9 +63,11 @@ const SearchBar = ({ placeholder, data }) => {
       {wordEntered !== undefined && wordEntered != 0 && (
         <div className="Data_output_addlist">
           {wordEntered}
-          <Re_button button_content="+" onClick={HandlePlusClick} />
+          {/* componets cant have on click  */}
+          <PrimaryButton button_content="+" onClick={HandlePlusClick} fontsize="2rem"/>
+          
 
-          {/* <button onClick={HandlePlusClick}>asd</button> */}
+          
         </div>
       )}
       {filteredData.length != 0 && (
