@@ -10,7 +10,7 @@
     height: 300px;
     width: 400px;
 
-    /* background-color: aqua; */
+    background-color: aqua;
 }
 .Popup_message::backdrop{
     background: rgb(0, 255, 255);

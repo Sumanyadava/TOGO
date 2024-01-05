@@ -15,7 +15,7 @@ const SearchBar = ({ placeholder, data }) => {
   //Aray can be null and can used previously if empty
 
   const HandlePlusClick = (e) => {
-    console.log(e)
+    return '<h1> asdasd </h1>'
   };
 
 
