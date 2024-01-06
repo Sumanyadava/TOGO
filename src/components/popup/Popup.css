@@ -15,4 +15,10 @@
 .Popup_message::backdrop{
     background: rgb(0, 255, 255);
 }
+
+.nnt{
+    height: 10vh;
+    width: 10vh;
+    background-color: aquamarine;
+}
 /* test dialog in html css */
