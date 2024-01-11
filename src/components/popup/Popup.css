@@ -1,24 +1,68 @@
-.Popup{
-    position: absolute;
+.all{
     
-    height: 30vh;
-    width: 100vh;
-    backdrop-filter: blur(5px);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    /* background-color: aqua; */
+
+    
+   
+    /* backdrop-filter: blur(5px); */
 }
 
 .Popup_message{
-    height: 300px;
-    width: 400px;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    background-color: aqua;
+    /* background-color: rgb(102, 236, 19); */
+    backdrop-filter: blur(3px);
+}
+.message_container{
+    background-color: azure;
+    height: 15vh;
+    width: 45vh;
+    padding: 3%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(50%,-50%);
+    
+    display: flex;
+    justify-content: space-around;
+
 }
 .Popup_message::backdrop{
     background: rgb(0, 255, 255);
 }
 
-.nnt{
-    height: 10vh;
-    width: 10vh;
-    background-color: aquamarine;
+.popup_button{
+    height: 25px;
+    width: 45px;
+  
+    
+    border: none;
+    background-color: inherit;
+
+    background-color: rgb(35, 50, 223);
+    border-radius: 5px;
+    color: aliceblue;
+    padding: 1%;
+}
+.Popup_add_tittle{
+    /* background-color: aqua; */
+    width: 30%;
+}
+.Popup_buttons{
+    /* background-color: aqua; */
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 /* test dialog in html css */

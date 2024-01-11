@@ -1,6 +1,7 @@
 import SecoundaryButton from "../buttons/SecoundaryButton";
 import PrimaryButton from "../buttons/PrimaryButton";
 import "./SubTodoCreate.css";
+import PopUp from '../popup/Popup'
 import React from "react";
 
 const SubTodoCreate = () => {
@@ -33,7 +34,8 @@ const SubTodoCreate = () => {
           
         </div>
         <div className="SubTodoCreate_add">
-        <PrimaryButton button_content="add" />
+        <PopUp />
+        {/* <PrimaryButton button_content="add" /> */}
         </div>
       </div>
     </div>

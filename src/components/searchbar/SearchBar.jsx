@@ -11,11 +11,14 @@ const SearchBar = ({ placeholder, data }) => {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState();
 
+  const [ToGo , newToGo] = useState([])
+
 
   //Aray can be null and can used previously if empty
 
   const HandlePlusClick = (e) => {
-    return '<h1> asdasd </h1>'
+    newToGo([...ToGo, wordEntered])
+    // setWordEntered("")
   };
 
 
@@ -36,8 +39,12 @@ const SearchBar = ({ placeholder, data }) => {
 
 
   const handleWord = () => {
-    setWordEntered("");
+    
     setFilteredData([]);
+
+    setWordEntered("");
+
+
   };
 
 
@@ -77,6 +84,19 @@ const SearchBar = ({ placeholder, data }) => {
           })}
         </div>
       )}
+      <div className="cc">
+        
+
+        {ToGo.map((toto) => (
+          <div className="ppp">
+            {wordEntered}
+
+            </div>
+          
+        ))}
+
+
+      </div>
     </div>
   );
 };

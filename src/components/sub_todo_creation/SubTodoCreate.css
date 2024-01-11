@@ -7,6 +7,7 @@
     justify-content: space-around;
     align-items: center;
     
+    
     flex-direction: column;
 }
 
@@ -17,6 +18,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    /* background-color: aliceblue; */
 }
 .SubTodoCreate_input{
     height: 80%;
@@ -45,6 +48,8 @@
     /* flex-wrap: wrap; */
     justify-content: space-around;
     align-items: center;
+
+    /* border: 2px solid; */
 }
 .tags_create_tags{
     height: 80%;
@@ -67,7 +72,7 @@
 .deadline{
     background-color: aqua;
     margin-left: 15%;
-    padding: 2%;
+    padding: 1%;
     border-radius: 10px;
 
 }
