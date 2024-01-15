@@ -18,7 +18,7 @@ const SearchBar = ({ placeholder, data }) => {
 
   const HandlePlusClick = (e) => {
     newToGo([...ToGo, wordEntered])
-    // setWordEntered("")
+    setWordEntered("")
   };
 
 
@@ -87,10 +87,10 @@ const SearchBar = ({ placeholder, data }) => {
       <div className="cc">
         
 
-        {ToGo.map((toto) => (
+        {ToGo.map((ob) => (
           <div className="ppp">
-            {wordEntered}
-
+            
+            {ob}
             </div>
           
         ))}

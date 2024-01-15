@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: center;
 
-    font-size: small;
+    
 }
 .CircleButton{
     background-color: black;
@@ -53,4 +53,6 @@
 
     margin: 2%;
     cursor: pointer;
+
+    z-index: 2;
 }

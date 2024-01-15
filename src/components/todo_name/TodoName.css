@@ -1,7 +1,6 @@
 .ToDo_name {
   height: 70vh;
   width: 30%;
-  /* width: max-content; */
 
   border-radius: 12px;
   background-color: rgb(217,217,217);
@@ -10,25 +9,46 @@
 .todo_heading {
   height: 15%;
   width: 100%;
-
-  font-size: 25px;
-  border-radius: 12px;
-  color: white;
-
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
-
+  
+  
+  font-size: 25px;
+  border-radius: 12px;
+  color: white;
   background-color: rgb(43,43,46);
+  
+  /* border: 1px solid rgb(43,43,46); */
+  
+  position: relative;
+  overflow: hidden;
+
+  
 }
+.todo_name_hidden{
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  
+  /* background-color: aqua; */
+}
+.bottom{
+  bottom: -105%;
+  
+}
+
 .todo_heading_name{
-    height: 80%;
+  height: 80%;
   width: 70%;
 
   display: flex;
   justify-content: baseline;
   align-items: center;
 
+  
 }
 .todo_heading_action{
     height: 80%;

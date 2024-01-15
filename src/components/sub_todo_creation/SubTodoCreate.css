@@ -1,7 +1,7 @@
 .SubTodoCreate{
-    height: 15%;
-    width: 100%;
-    background-color: antiquewhite;
+    height: 100%;
+    width: 90%;
+    background-color: rgb(43,43,46);
 
     display: flex;
     justify-content: space-around;
@@ -49,6 +49,8 @@
     justify-content: space-around;
     align-items: center;
 
+    font-size: 1vw;
+
     /* border: 2px solid; */
 }
 .tags_create_tags{
@@ -71,7 +73,7 @@
 }
 .deadline{
     background-color: aqua;
-    margin-left: 15%;
+    
     padding: 1%;
     border-radius: 10px;
 
