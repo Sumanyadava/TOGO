@@ -19,7 +19,7 @@ const TodoName = () => {
         
           <div className="todo_heading_name">Heading of todo</div>
           <div className="todo_heading_action">
-            <CircleButton button_content="i" tittle_prop="add here" onClick={handleShow}/>
+            <CircleButton button_content="i" tittle_prop="add here" onClick={handleShow} />
             <CircleButton button_content="e" tittle_prop="edit here"/>
           </div>
 

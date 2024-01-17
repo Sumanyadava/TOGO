@@ -2,9 +2,25 @@ import SecoundaryButton from "../buttons/SecoundaryButton";
 import PrimaryButton from "../buttons/PrimaryButton";
 import "./SubTodoCreate.css";
 import PopUp from '../popup/Popup'
-import React from "react";
+import React, { useState } from "react";
 
 const SubTodoCreate = () => {
+
+  const [valuetodo , setvaluetodo] = useState("")
+  const [tasktodo , settasktodo] = useState([])
+
+  const handletodo = (e) => {
+    const todoword = e.target.value;
+    setvaluetodo(todoword)
+  }
+
+  const handletodoclick = (e) => {
+
+    settasktodo([...tasktodo, valuetodo])
+    setvaluetodo("")
+  }
+
+
   return (
     <div className="SubTodoCreate">
       <div className="inp">
@@ -12,6 +28,9 @@ const SubTodoCreate = () => {
           type="text"
           placeholder="write your task"
           className="SubTodoCreate_input"
+
+          value={valuetodo}
+          onChange={handletodo}
         />
 
         <input
@@ -34,8 +53,18 @@ const SubTodoCreate = () => {
           
         </div>
         <div className="SubTodoCreate_add">
-        <PopUp />
-        {/* <PrimaryButton button_content="add" /> */}
+        {/* <PopUp /> */}
+        <PrimaryButton button_content="add" onClick={handletodoclick}/>
+
+        {
+        tasktodo.map((ops) =>(
+          <div className="ppp">
+            {ops}
+          </div>
+        ))
+         
+        
+        }
         </div>
       </div>
     </div>
