@@ -1,15 +1,42 @@
-.PrimaryButton{
+/* my formatinf 
+transition of 0.4s is best 
+*/
+
+/* button have 3 types 
+
+primary 
+secoundary 
+circular 
+
+size based of 3 types 
+
+big 
+medium 
+small
+
+
+chanable things 
+
+size 
+content 
+onclick
+tittle 
+
+
+
+*/
+
+.primaryButton , .secoundaryButton{
     height: max-content;
     width: max-content;
     
     background-color: rgb(20, 75, 255);
-    color: white;
-
-    border:  solid rgb(20, 75, 255);
+    color: aliceblue;
+    
+    
     border-radius: 5px;
-
-
-    padding: 1%;
+    border: solid rgb(20, 75, 255);
+    padding: 0.5%;
 
     cursor: pointer;
 
@@ -17,42 +44,80 @@
     justify-content: center;
     align-items: center;
 
+    font-size: 1vw;
+
+    transition: 0.4s ease;
+    
+
 }
-.PrimaryButton:hover,.SecoundaryButton:hover{
+.secoundaryButton{
+
+    background-color: rgba(45, 25, 103 );
+    /* color: rgb(20, 75, 255); */
+    border: solid rgba(45, 25, 103 );
+
+}
+.primaryButton:active {
+    background-color: blue;
+}
+.secoundaryButton:active{
+    background-color: rgb(185, 122, 247);
+}
+.primaryButton:hover,.secoundaryButton:hover{
+    
     transform: scale(1.1);
-}
-
-.SecoundaryButton{
-    height: max-content;
-    width: max-content;
-
-    color: rgb(20, 75, 255);
-
-    padding: 1%;
-
-    border-radius: 5px;
-    border:  solid rgb(20, 75, 255);
-
-    cursor: pointer;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    box-shadow: 0 1px 2px;
     
 }
-.CircleButton{
-    background-color: black;
+.secoundaryButton:hover{
+    box-shadow: 0 1px 2px aliceblue;
+}
+
+.circularButton{
+    /* background-color: #28231D; */
+    /* background-color: #0D0907; */
+    /* background-color: #0c0908; */
+    background-color: #080402;
     border-radius: 100%;
-    height: 20px;
-    width: 20px;
+    height: 2vw;
+    width: 2vw;
+    color: aliceblue;
     
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin: 2%;
+    
     cursor: pointer;
 
     z-index: 2;
+}
+
+.circle_large{
+    height: 3vw;
+    width: 3vw;
+    font-size: 2vw;
+}
+.circle_medium{
+    height: 2vw;
+    width: 2vw;
+    font-size: 1vw;
+}
+.circle_small{
+    height: 1vw;
+    width: 1vw;
+    font-size: 0.5vw;
+}
+
+
+.button_large{
+    font-size: 2vw;
+}
+
+.button_medium{
+    font-size: 1vw;
+}
+
+.button_small{
+    font-size: 0.5vw;
 }

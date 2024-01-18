@@ -1,8 +1,7 @@
-import SecoundaryButton from "../buttons/SecoundaryButton";
-import PrimaryButton from "../buttons/PrimaryButton";
+
 import "./SubTodoCreate.css";
-import PopUp from '../popup/Popup'
 import React, { useState } from "react";
+import ButtonComp from "../buttons/ButtonComp";
 
 const SubTodoCreate = () => {
 
@@ -42,9 +41,9 @@ const SubTodoCreate = () => {
       </div>
       <div className="tags_create">
         <div className="tags_create_tags">
-          <SecoundaryButton button_content="important" />
+        <ButtonComp button_content="important" />
           
-          <SecoundaryButton button_content="urgent" />
+          <ButtonComp button_content="urgent" />
 
           <div className="deadline">
             09:39:45
@@ -53,8 +52,8 @@ const SubTodoCreate = () => {
           
         </div>
         <div className="SubTodoCreate_add">
-        {/* <PopUp /> */}
-        <PrimaryButton button_content="add" onClick={handletodoclick}/>
+        
+        <ButtonComp button_content="add" onClick={handletodoclick}/>
 
         {
         tasktodo.map((ops) =>(

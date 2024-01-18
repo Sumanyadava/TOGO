@@ -16,3 +16,17 @@ finding difficult
 
 naming convention 
 uniformation of buttons
+
+
+Refactoring 
+
+-> code formating 
+removing unecceary tags and code 
+
+use understanable name for variable folder classes finction
+
+avoiding repetation 
+
+keeping component small 
+
+using single response finction 
