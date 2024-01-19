@@ -49,6 +49,11 @@
   align-items: center;
 
   
+
+  
+}
+contentEditable{
+  background-color: aliceblue;
 }
 .todo_heading_action{
     height: 80%;

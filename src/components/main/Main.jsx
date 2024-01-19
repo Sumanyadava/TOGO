@@ -2,12 +2,17 @@ import React from 'react';
 import TodoName from '../todo_name/TodoName';
 import './Main.css';
 
-const Main = () => {
+const Main = ({data , first}) => {
+  
   return (
     <div className='main'>
-      <TodoName /> 
-      <TodoName /> 
-      <TodoName /> 
+      {console.log(first)}
+
+      {
+        data.todos.map((todo,index) => (
+          <TodoName key={index} data={todo}/>
+        ))
+      }   
    
       
       

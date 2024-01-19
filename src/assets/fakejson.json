@@ -1,0 +1,52 @@
+{
+    "todos": [
+      {
+        "_id": "1",
+        "todoCreatorID": "user123",
+        "name": "Task 1",
+        "createdAt": "2024-01-19T12:00:00Z",
+        "updatedAt": "2024-01-19T13:30:00Z",
+        "subTodos": [
+          {
+            "_id": "1a",
+            "subTodoCreatorID": "user123",
+            "name": "Subtask 1.1",
+            "createdAt": "2024-01-19T12:15:00Z",
+            "updatedAt": "2024-01-19T14:00:00Z",
+            "deadline": "2024-01-20T18:00:00Z",
+            "status": "pending"
+          },
+          {
+            "_id": "1b",
+            "subTodoCreatorID": "user123",
+            "name": "Subtask 1.2",
+            "createdAt": "2024-01-19T12:30:00Z",
+            "updatedAt": "2024-01-19T14:30:00Z",
+            "deadline": "2024-01-21T12:00:00Z",
+            "status": "working"
+          }
+        ]
+      },
+      {
+        "_id": "2",
+        "todoCreatorID": "user456",
+        "name": "Task 2",
+        "createdAt": "2024-01-19T14:00:00Z",
+        "updatedAt": "2024-01-19T15:45:00Z",
+        "subTodos": [
+          {
+            "_id": "2a",
+            "subTodoCreatorID": "user456",
+            "name": "Subtask 2.1",
+            "createdAt": "2024-01-19T14:15:00Z",
+            "updatedAt": "2024-01-19T16:30:00Z",
+            "deadline": "2024-01-22T10:00:00Z",
+            "status": "review"
+          }
+        ]
+      }
+      
+    ]
+  }
+  
+  

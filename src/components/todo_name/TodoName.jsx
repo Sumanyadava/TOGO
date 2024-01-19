@@ -5,14 +5,21 @@ import SubTodoCreate from "../sub_todo_creation/SubTodoCreate";
 import "./TodoName.css";
 import ButtonComp from "../buttons/ButtonComp";
 
-const TodoName = () => {
-  const [show , setshow] = useState()
+const TodoName = ({data}) => {
+
+  // code depth use one flag
+  const [show , setshow] = useState(true)
+  const [flag, setFlag] = useState(false)
 
 
 
-  const handleShow = () => {
+  const handleaddtodo = () => {
     setshow(!show)
 
+  }
+
+  const handletittleedit = () => {
+    setFlag(!flag)
   }
 
 
@@ -23,13 +30,14 @@ const TodoName = () => {
 
       <div className="todo_heading" >
         
-          <div className="todo_heading_name">Heading of todo</div>
+          <div className="todo_heading_name" contentEditable={flag}>{data?.name}</div>
           <div className="todo_heading_action">
-            <ButtonComp button_content="i" tittle_prop="add here" onClick={handleShow} type="circularButton circle_small"/>
-            <ButtonComp button_content="e" tittle_prop="edit here" type="circularButton circle_small"/>
+            <ButtonComp button_content="i" tittle_prop="add here" onClick={handleaddtodo} type="circularButton circle_small"/>
+            <ButtonComp button_content="e" tittle_prop="edit here" onClick={handletittleedit} type="circularButton circle_small"/>
           </div>
 
           {/* ES6 saves the day using this simple method */}
+      {/* <div className={`${show === false ? "todo_name_hidden" : "todo_name_hidden bottom"}`}> */}
       <div className={`${show === false ? "todo_name_hidden" : "todo_name_hidden bottom"}`}>
       
       <SubTodoCreate />
@@ -40,11 +48,11 @@ const TodoName = () => {
 
 
       <div className="todo_content">
-        <SubTodo />
-        <SubTodo />
-        <SubTodo />
-        <SubTodo />
-        <SubTodo />
+        {
+          data?.subTodos.map((subTodo,index)=> (
+            <SubTodo data={subTodo} key={index}/>
+          ) )
+        }
         
       </div>
     </div>

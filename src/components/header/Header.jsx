@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SearchBar from '../searchbar/SearchBar'
 import "./Header.css"
-import data from '../../assets/books.json'
 
-const Header = () => {
+
+
+const Header = ({data, aac}) => {
+
+  // const [first, setfirst] = useState([])
+  const abc = (ToGo)=>{
+    aac(ToGo)
+  }
   return (
     
       <div className="header">
 
-        <SearchBar placeholder="enter placeholder" data={data}/>
+        <SearchBar placeholder="enter placeholder"  data={data} abc={abc} />
+
+        
         
       </div>
     
