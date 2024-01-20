@@ -1,27 +1,31 @@
 .Login{
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
 
-    /* background-color: aqua; */
+    background-color: aqua;
     display: flex;
 
-    
 }
 .Login_image{
     height: 100%;
-    width: 50%;
+    width: 50vw;
     background-image: url(../../assets/images/login.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
+    /* position: relative; */
+
 }
+
 .Login_form{
     height: 100%;
     width: 50%;
     background-color: white;
 
+    
+
     display: flex;
-    justify-content: baseline;
+    justify-content: center;
     align-items: center;
     
     flex-direction: column;
@@ -29,26 +33,25 @@
 .Login_form_heading{
     height: fit-content;
     width: 80%;
-    margin-top: 5%;
-    /* background-color: rgb(19, 163, 52); */
-    font-size: 4rem;
+    background-color: rgb(19, 163, 52);
+    font-size: 1vw;
 
     
 
     
 }
 .line{
-    margin: 5%;
+    /* margin: 5%; */
     width: 80%;
     border: 1px solid;
 
 }
 
 .Sign_in_option{
-    margin-top: 5%;
+    /* margin-top: 5%; */
     height: 20%;
     width: 80%;
-    /* background-color: rgb(80, 55, 179); */
+    background-color: rgb(80, 55, 179);
 
     display: flex;
     justify-content: center;
@@ -69,12 +72,12 @@
 .Sign_in_p{
     height: fit-content;
     width: 100%;
-    font-size: 2.5rem;
-    /* background-color: antiquewhite; */
+    font-size: 3vw;
+    background-color: antiquewhite;
 }
 .Sign_in_a{
     height: 30%;
-    width: 70%;
+    width: 20vw;
     
     border-radius: 10px;
     
@@ -85,6 +88,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-size: 2vw;
 
 }
 .Login_form_action{
@@ -96,6 +100,7 @@
     justify-content: space-around;
     align-items: baseline;
     flex-direction: column;
+    background-color: aqua;
 }
 .form_content{
     height: 80%;
@@ -103,32 +108,44 @@
     
 
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     flex-direction: column;
 }
-h1{
-    font-size: 2.5rem;
+.heading_login_sub{
+    font-size: 2vw;
+    background-color: inherit;
+    position: relative;
+    top: -1.2vw;
+    left: 10vw;
+    
+
 }
 label{
-    font-size: 1.5rem;
+    font-size: 1vw;
+    margin: 1vw 0;
 }
 .input{
     height: 20%;
-    width: 80%;
-    background-color: rgb(230, 230, 230);
-    border-radius: 5px;
-    padding-left: 10%;
-    font-size: 20px;
+    width: 100%;
+    
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+
+    padding: 0px 10px;
+    
+
+    font-size: 1vw;
+    border: 1px solid;
+    
     
     
 }
 .input:focus{
-    background-color: rgb(244, 244, 244);
-    box-shadow: 0px 2px 3px;
+    /* background-color: rgb(244, 244, 244); */
+    border: 1px solid rgba(0, 0, 255, 0.7);
+    box-shadow: 0px 2px 1px rgba(0, 0, 255, 0.6);
 }
-a{
-    width: fit-content;
-}
+
 
 
 .Login_button{

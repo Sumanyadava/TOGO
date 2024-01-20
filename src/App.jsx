@@ -10,8 +10,8 @@ import Home from './pages/home/Home';
 function App() {
   return (
     <div className="App">
-      {/* <Login /> */}
-      <Entry />
+      <Login />
+      {/* <Entry /> */}
       {/* <Register /> */}
       {/* <Test /> */}
 
