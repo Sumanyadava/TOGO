@@ -35,14 +35,14 @@ const SearchBar = ({ placeholder, data, abc }) => {
         .toLowerCase()
         .includes(SearchWord.toLowerCase().trim()))return value?.name;
     });
-    if (SearchWord == 0) {
+    if (SearchWord == 0 ) {
       setFilteredData([]);
     } else {
       setFilteredData(newFilter);
-      console.log("aaa")
+      
     }
   };
-  console.log({filteredData})
+  
 
   const handleWord = () => {
     setFilteredData([]);
@@ -81,14 +81,17 @@ const SearchBar = ({ placeholder, data, abc }) => {
         </div>
       )}
 
-
-      {filteredData.length != 0 && (
+          {/* a way to remove undefined data is filter boolea */}
+      { filteredData.filter(Boolean).length != 0 && (
         <div className="Data_output">
+          
           {filteredData.slice(0, 5).map((outputlist) => {
             return <div className="Data_output_list">
               
               {outputlist}
+
               
+
               </div>;
           })}
         </div>

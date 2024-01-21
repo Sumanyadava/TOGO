@@ -1,8 +1,8 @@
 .Login{
     height: 100%;
     width: 100%;
-
-    background-color: aqua;
+    background-color: #0081ba;
+    /* background-color: aqua; */
     display: flex;
 
 }
@@ -10,11 +10,25 @@
     height: 100%;
     width: 50vw;
     background-image: url(../../assets/images/login.jpg);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-
+    background-position: bottom;
     /* position: relative; */
 
+}
+.moto{
+    font-size: 3vw;
+    color: rgb(35, 35, 35);
+    text-align: center;
+    position: relative;
+    top: 20%;
+    
+}
+.moto_change{
+    /* display: block; */
+    height: 10px;
+    width: 10px;
+    color: black;
 }
 
 .Login_form{
@@ -31,18 +45,30 @@
     flex-direction: column;
 }
 .Login_form_heading{
-    height: fit-content;
-    width: 80%;
-    background-color: rgb(19, 163, 52);
+    height: 10%;
+    width: 50%;
+    /* background-color: rgb(19, 163, 52); */
     font-size: 1vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    flex-direction: column;
 
     
 
     
 }
+.company_name_login{
+    font-size: 3.8vw;
+}
+.developedby{
+    font-size: 0.6vw;
+}
 .line{
     /* margin: 5%; */
-    width: 80%;
+    width: 40%;
     border: 1px solid;
 
 }
@@ -50,8 +76,8 @@
 .Sign_in_option{
     /* margin-top: 5%; */
     height: 20%;
-    width: 80%;
-    background-color: rgb(80, 55, 179);
+    width: 50%;
+    /* background-color: rgb(80, 55, 179); */
 
     display: flex;
     justify-content: center;
@@ -61,46 +87,48 @@
 .sign_in_heading{
     height: 100%;
     width: 100%;
+    
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
     /* background-color: antiquewhite; */
     
 }
 .Sign_in_p{
     height: fit-content;
-    width: 100%;
-    font-size: 3vw;
-    background-color: antiquewhite;
+    width: 90%;
+    font-size: 2vw;
+    /* background-color: antiquewhite; */
 }
 .Sign_in_a{
-    height: 30%;
-    width: 20vw;
+    height: 20%;
+    width: 15vw;
     
-    border-radius: 10px;
+    border-radius: 3px;
+    color: rgba(0, 0, 255, 0.7);
+    margin-top: 2%;
     
-    background-color: rgb(77, 183, 16);
-    color: black;
+    font-size: 1vw;
+    text-decoration: underline;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 2vw;
+    transition: 0.3s ease;
 
+}
+.Sign_in_a:hover{
+    letter-spacing: 1px;
 }
 .Login_form_action{
     height: 40%;
-    width: 80%;
+    width: 50%;
     
     
     display: flex;
     justify-content: space-around;
     align-items: baseline;
     flex-direction: column;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 .form_content{
     height: 80%;
@@ -111,27 +139,28 @@
     /* justify-content: space-evenly; */
     flex-direction: column;
 }
-.heading_login_sub{
-    font-size: 2vw;
+.heading_signin_sub{
+    font-size: 1vw;
     background-color: inherit;
+    padding: 0 1%;
     position: relative;
-    top: -1.2vw;
-    left: 10vw;
+    top: 0.5vw;
+    
     
 
 }
 label{
     font-size: 1vw;
-    margin: 1vw 0;
+    margin-top: 1vw;
 }
 .input{
     height: 20%;
-    width: 100%;
+    width: 80%;
     
     background-color: rgb(255, 255, 255);
     border-radius: 3px;
 
-    padding: 0px 10px;
+    padding-left: 10%;
     
 
     font-size: 1vw;
@@ -146,14 +175,33 @@ label{
     box-shadow: 0px 2px 1px rgba(0, 0, 255, 0.6);
 }
 
-
+.Login_FP{
+    text-align: end;
+    margin: 3% 10%;
+    transition: 0.3s ease;
+}
+.Login_FP:hover{
+    letter-spacing: 0.5px;
+}
 
 .Login_button{
     
     height: 15%;
-    width: 25%;
-    background-color: rgb(39, 231, 103);
+    width: 90%;
+    background-color: rgba(0, 0, 255, 0.7);
     
-    border: 1px solid;
-    border-radius: 10px;
+    border: none;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+.Login_button:active{
+    background-color: rgba(0, 0, 255, 0.4);
+    
+}
+.Login_button:hover{
+    letter-spacing: 2px;
+}
+a{
+    color: black;
+    text-decoration:underline;
 }

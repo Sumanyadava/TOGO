@@ -1,4 +1,4 @@
-// import './Register.css'
+import './Register.css'
 
 import React from "react";
 
@@ -6,32 +6,57 @@ const Register = () => {
   return (
     
     
-    <div className="Login">
-      <div className="Login_image"></div>
-      <div className="Login_form">
-        <div className="Login_form_heading">Heading of Sign in</div>
+    <div className="signin">
+      <div className="signin_image">
+        
+        
+        </div>
+      <div className="signin_form">
+        <div className="signin_form_heading">
+
+        <h1 className="company_name_login">ToGo: </h1>
+          <p className="developedby">
+            formely developed by <a href="https://sumany.netlify.app/" target='_blank'>Suman</a> & <a href="">Rick</a>
+          </p>
+
+          
+          
+          
+          
+        </div>
 
         
 
         <div className="line"></div>
-        <form action="" className="Login_form_action">
-          <h1 style={{ paddingBottom: "4%" }}>Sign_up</h1>
+        <form action="" className="signin_form_action">
+          <h3>Sign up here</h3>
+          <p className="developedby">
+            manage your task
+          </p>
           <div className="form_content">
             <label htmlFor="">User Name</label>
             <input className="input"type="text" name="" id="" />
             <label htmlFor="">Email</label>
-            <input className="input"type="text" name="" id="" />
+            <input className="input"type="email" name="" id="" />
             <label htmlFor="">Password</label>
-            <input className="input"type="text" name="" id="" />
-            <a href="#" className="Login_FP">
-              Forget&ensp;Password?
-            </a>
+            <input className="input"type="password" name="" id="" />
+            <label htmlFor="">Confirm Password</label>
+            <input className="input"type="password" name="" id="" />
             <p className='warning'>{}</p>
           </div>
-          <button type="submit" className="Login_button">
-            Hello
+          <button type="submit" className="signin_button">
+            Sign in
           </button>
         </form>
+            <h4 className="term_condition">
+            By continuing you accept our standard terms and conditions and our privacy policy.
+
+
+            <p className='login_redirect_contain'>Or have an account? <a href='#' className="login_redirect">login here</a></p>
+
+            </h4>
+
+            
       </div>
     </div>
 

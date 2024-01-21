@@ -6,7 +6,7 @@ const Main = ({data , first}) => {
   
   return (
     <div className='main'>
-      {console.log(first)}
+      
 
       {
         data.todos.map((todo,index) => (

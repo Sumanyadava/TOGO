@@ -1,7 +1,7 @@
 import Header from '../../components/header/Header'
 import Main from '../../components/main/Main'
 import React, { useState } from 'react';
-import Popup from '../../components/popup/Popup';
+
 import apiData from "../../assets/fakejson.json"
 
 import './Home.css'
