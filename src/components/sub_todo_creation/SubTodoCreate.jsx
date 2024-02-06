@@ -3,7 +3,7 @@ import "./SubTodoCreate.css";
 import React, { useState } from "react";
 import ButtonComp from "../buttons/ButtonComp";
 
-const SubTodoCreate = () => {
+const SubTodoCreate = ({todouping,da}) => {
 
   const [valuetodo , setvaluetodo] = useState("")
   const [tasktodo , settasktodo] = useState([])
@@ -14,9 +14,10 @@ const SubTodoCreate = () => {
   }
 
   const handletodoclick = (e) => {
-
+    
     settasktodo([...tasktodo, valuetodo])
     setvaluetodo("")
+    todouping([...tasktodo, valuetodo])
   }
 
 
@@ -55,15 +56,7 @@ const SubTodoCreate = () => {
         
         <ButtonComp button_content="add" onClick={handletodoclick}/>
 
-        {
-        tasktodo.map((ops) =>(
-          <div className="ppp">
-            {ops}
-          </div>
-        ))
-         
         
-        }
         </div>
       </div>
     </div>

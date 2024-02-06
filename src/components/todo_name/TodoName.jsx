@@ -5,11 +5,14 @@ import SubTodoCreate from "../sub_todo_creation/SubTodoCreate";
 import "./TodoName.css";
 import ButtonComp from "../buttons/ButtonComp";
 
-const TodoName = ({data}) => {
+const TodoName = ({todo,data}) => {
 
   // code depth use one flag
   const [show , setshow] = useState(true)
   const [flag, setFlag] = useState(false)
+  const [todolist, settodolist] = useState([])
+
+  // console.log(todo)
 
 
 
@@ -22,6 +25,12 @@ const TodoName = ({data}) => {
     setFlag(!flag)
   }
 
+  const todouping = (tasktodo) => {
+
+    settodolist(tasktodo)
+    
+  }
+
 
   return (
 
@@ -30,7 +39,7 @@ const TodoName = ({data}) => {
 
       <div className="todo_heading" >
         
-          <div className="todo_heading_name" contentEditable={flag}>{data?.name}</div>
+          <div className="todo_heading_name" contentEditable={flag}>{todo}</div>
           <div className="todo_heading_action">
             <ButtonComp button_content="i" tittle_prop="add here" onClick={handleaddtodo} type="circularButton circle_small"/>
             <ButtonComp button_content="e" tittle_prop="edit here" onClick={handletittleedit} type="circularButton circle_small"/>
@@ -40,7 +49,7 @@ const TodoName = ({data}) => {
       {/* <div className={`${show === false ? "todo_name_hidden" : "todo_name_hidden bottom"}`}> */}
       <div className={`${show === false ? "todo_name_hidden" : "todo_name_hidden bottom"}`}>
       
-      <SubTodoCreate />
+      <SubTodoCreate todouping={todouping} da="da" />
       </div>
 
       </div>
@@ -48,9 +57,11 @@ const TodoName = ({data}) => {
 
 
       <div className="todo_content">
+      
+
         {
-          data?.subTodos.map((subTodo,index)=> (
-            <SubTodo data={subTodo} key={index}/>
+          todolist.map((todolistelement,index)=> (
+            <SubTodo todolistelement={todolistelement} key={index}/>
           ) )
         }
         

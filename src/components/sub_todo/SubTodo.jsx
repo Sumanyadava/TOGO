@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Tags from "./tags/Tags";
 import "./SubTodo.css";
 
-const SubTodo = ({data}) => {
+const SubTodo = ({todolistelement}) => {
   
   const [Status_state,setStatus_state] = useState()
+  
   const statusHandler = (e) => {
      let status_color = e.target.value
 
@@ -21,14 +22,14 @@ const SubTodo = ({data}) => {
     if (status_color == "Done") {
       setStatus_state = "white"
     }
-    console.log(setStatus_state)
+    // console.log(setStatus_state)
   }
   return (
 
     
     <div className="Sub_todo">
       <div className="Sub_todo_name">
-        <p>{data?.name}</p>
+        <p>{todolistelement}</p>
 
         <div className="Sub_todo_tags">
         <Tags color="brown" />
@@ -41,7 +42,7 @@ const SubTodo = ({data}) => {
         
         {/* code dept  */}
         
-        <select name="Status" id="Status" defaultValue={data?.status}>
+        <select name="Status" id="Status" /*defaultValue={}*/>
           
           <option value="pending">Pending</option>
           <option value="working">Working</option>
