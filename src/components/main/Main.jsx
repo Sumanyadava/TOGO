@@ -14,13 +14,10 @@ const Main = ({ first}) => {
         first.map((todo,index) => (
           <TodoName key={index} todo={todo}/>
         ))
+        
       }
+    
 
-      {/* {
-        data.todos.map((todo,index,) => (
-          <TodoName key={index} data={todo}/>
-        ))
-      }    */}
       
       
       

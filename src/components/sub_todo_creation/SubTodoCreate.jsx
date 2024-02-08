@@ -8,6 +8,11 @@ const SubTodoCreate = ({todouping,da}) => {
   const [valuetodo , setvaluetodo] = useState("")
   const [tasktodo , settasktodo] = useState([])
 
+  const handleUrgent = (e) => {
+    console.log(e.target)
+    
+  }
+
   const handletodo = (e) => {
     const todoword = e.target.value;
     setvaluetodo(todoword)
@@ -44,7 +49,7 @@ const SubTodoCreate = ({todouping,da}) => {
         <div className="tags_create_tags">
         <ButtonComp button_content="important" />
           
-          <ButtonComp button_content="urgent" />
+          <ButtonComp button_content="urgent" onClick={handleUrgent}/>
 
           <div className="deadline">
             09:39:45
