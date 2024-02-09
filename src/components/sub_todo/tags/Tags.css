@@ -1,5 +1,83 @@
-.tags{
-    height: 20px;
-    width: 20px;
+/* my formatinf 
+transition of 0.4s is best 
+*/
+
+/* button have 3 types 
+
+primary 
+secoundary 
+circular 
+
+size based of 3 types 
+
+big 
+medium 
+small
+
+
+chanable things 
+
+size 
+content 
+onclick
+tittle 
+
+*/
+:root {
+    --primarycolor: red;
+    --secoundarycolor:orange;
+  }
+
+.primaryTag,.secoundaryTag{
+    height: max-content;
+    width: max-content;
+
+    border: 1px solid ;
+    color: var(--primarycolor);
+
+    padding: 0.5%;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1vw;
+
+    transition: 0.4s ease;
+
+
+}
+.secoundaryTag{
+
+    color: var(--secoundarycolor);
+
+}
+.active{
+
+}
+.primaryTag:hover,.secoundaryTag:hover{
     
+    color: rgb(255, 236, 27);
+    background-color: var(--primarycolor);
+    border: none;
+    transition: 0.3s ease-in;
+    
+    
+}
+.secoundaryTag:hover{
+    background-color: var(--secoundarycolor);
+}
+
+.tags_large{
+    font-size: 2vw;
+}
+
+.tags_medium{
+    font-size: 1vw;
+}
+
+.tags_small{
+    font-size: 0.5vw;
 }

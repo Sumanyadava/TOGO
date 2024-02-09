@@ -49,7 +49,7 @@ const TodoName = ({todo,data}) => {
       {/* <div className={`${show === false ? "todo_name_hidden" : "todo_name_hidden bottom"}`}> */}
       <div className={`${show === false ? "todo_name_hidden" : "todo_name_hidden bottom"}`}>
       
-      <SubTodoCreate todouping={todouping} da="da" />
+      <SubTodoCreate todouping={todouping} />
       </div>
 
       </div>

@@ -2,8 +2,9 @@
 import "./SubTodoCreate.css";
 import React, { useState } from "react";
 import ButtonComp from "../buttons/ButtonComp";
+import Tags from "../sub_todo/tags/Tags";
 
-const SubTodoCreate = ({todouping,da}) => {
+const SubTodoCreate = ({todouping}) => {
 
   const [valuetodo , setvaluetodo] = useState("")
   const [tasktodo , settasktodo] = useState([])
@@ -19,10 +20,14 @@ const SubTodoCreate = ({todouping,da}) => {
   }
 
   const handletodoclick = (e) => {
+    if (valuetodo == 0) {
+      alert("write something in todo")
+    }else{
     
     settasktodo([...tasktodo, valuetodo])
     setvaluetodo("")
     todouping([...tasktodo, valuetodo])
+    }
   }
 
 
@@ -47,9 +52,9 @@ const SubTodoCreate = ({todouping,da}) => {
       </div>
       <div className="tags_create">
         <div className="tags_create_tags">
-        <ButtonComp button_content="important" />
+        <Tags tags_content="important" type="primaryTag tags_medium" />
           
-          <ButtonComp button_content="urgent" onClick={handleUrgent}/>
+          <Tags tags_content="urgent"  type="secoundaryTag tags_medium"/>
 
           <div className="deadline">
             09:39:45

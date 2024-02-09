@@ -1,10 +1,12 @@
 import React from 'react'
 import './Tags.css'
 
-const Tags = ({color}) => {
+const Tags = ({type,onClick,tags_content}) => {
+
+  
   return (
-    <div className='tags' style={{background: color }}>
-      
+    <div className={type} onClick={onClick}>
+      {tags_content}
     </div>
   )
 }

@@ -6,6 +6,7 @@ import Test from './pages/test/test';
 
 import './App.css';
 import Home from './pages/home/Home';
+import Tags from './components/sub_todo/tags/Tags';
 
 function App() {
   return (
@@ -14,6 +15,13 @@ function App() {
       <Entry />
       {/* <Register />  */}
       {/* <Test /> */}
+      
+
+      
+
+
+
+      
 
     </div>
   );
