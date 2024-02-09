@@ -8,11 +8,28 @@ const SubTodoCreate = ({todouping}) => {
 
   const [valuetodo , setvaluetodo] = useState("")
   const [tasktodo , settasktodo] = useState([])
+  const [tags_flag, setTags_flag] = useState({
+    urgent_flag: false,
+    important_flag: false
+  })
 
-  const handleUrgent = (e) => {
-    console.log(e.target)
+  const handleTags_urgent = () => {
+  
+    setTags_flag(prevState => ({
+      ...prevState,urgent_flag: !prevState.urgent_flag
+    }))
+
     
   }
+  const handleTags_important = () => {
+  
+    setTags_flag(prevState => ({
+      ...prevState,important_flag: !prevState.important_flag
+    }))
+
+    
+  }
+
 
   const handletodo = (e) => {
     const todoword = e.target.value;
@@ -52,9 +69,9 @@ const SubTodoCreate = ({todouping}) => {
       </div>
       <div className="tags_create">
         <div className="tags_create_tags">
-        <Tags tags_content="important" type="primaryTag tags_medium" />
+        <Tags tags_content="important" type={`primaryTag tags_medium ${tags_flag.important_flag ? 'sec_active' : '' }`} onClick={handleTags_important} />
           
-          <Tags tags_content="urgent"  type="secoundaryTag tags_medium"/>
+        <Tags tags_content="urgent"  type={`secoundaryTag tags_medium ${tags_flag.urgent_flag ? 'sec_active' : '' }`}  onClick={handleTags_urgent}/>
 
           <div className="deadline">
             09:39:45

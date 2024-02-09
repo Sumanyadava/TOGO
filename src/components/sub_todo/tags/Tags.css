@@ -54,14 +54,12 @@ tittle
     color: var(--secoundarycolor);
 
 }
-.active{
 
-}
 .primaryTag:hover,.secoundaryTag:hover{
     
-    color: rgb(255, 236, 27);
+    color: aliceblue;
     background-color: var(--primarycolor);
-    border: none;
+    /* border: none; */
     transition: 0.3s ease-in;
     
     
@@ -69,6 +67,17 @@ tittle
 .secoundaryTag:hover{
     background-color: var(--secoundarycolor);
 }
+.pri_active{
+    color: aliceblue;
+    background-color: var(--primarycolor);
+    
+}
+.sec_active{
+    color: aliceblue;
+    background-color: var(--secoundarycolor);
+    
+}
+
 
 .tags_large{
     font-size: 2vw;
