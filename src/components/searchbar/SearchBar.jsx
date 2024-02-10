@@ -4,7 +4,7 @@ import CrossIcon from "../../assets/cross_icon";
 import ButtonComp from "../buttons/ButtonComp";
 import "./SearchBar.css";
 
-const SearchBar = ({ placeholder, data, uping }) => {
+const SearchBar = ({ placeholder, data, headeruping }) => {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 
@@ -14,7 +14,7 @@ const SearchBar = ({ placeholder, data, uping }) => {
   //Aray can be null and can used previously if empty
 
   const HandlePlusClick = (e) => {
-    uping([...ToGo, wordEntered])
+    headeruping([...ToGo, wordEntered])
     setToGo([...ToGo, wordEntered]);
     setWordEntered("");
     setFilteredData([]);

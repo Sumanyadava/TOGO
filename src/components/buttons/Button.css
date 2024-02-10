@@ -36,7 +36,7 @@ tittle
     
     border-radius: 5px;
     border: solid rgb(20, 75, 255);
-    padding: 0.5%;
+    padding: 0.1vw;
 
     cursor: pointer;
 
@@ -57,20 +57,21 @@ tittle
     border: solid rgba(45, 25, 103 );
 
 }
-.primaryButton:active {
-    background-color: blue;
-}
+
 .secoundaryButton:active{
     background-color: rgb(185, 122, 247);
 }
 .primaryButton:hover,.secoundaryButton:hover{
     
     transform: scale(1.1);
-    box-shadow: 0 1px 2px;
+    box-shadow: 0 1px 2px black;
     
 }
 .secoundaryButton:hover{
     box-shadow: 0 1px 2px aliceblue;
+}
+.primaryButton:active {
+    transform: scale(1.05);
 }
 
 .circularButton{

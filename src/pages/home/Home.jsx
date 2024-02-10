@@ -9,11 +9,11 @@ import React, { useState } from 'react';
 const Home = () => {
 
   const [data, setData] = useState(apiData)
-  const [first, setfirst] = useState([])
+  const [mainprop, setmainprop] = useState([])
 
   const mainUping = (ToGo) =>{
     // console.log(ToGo)
-    setfirst(ToGo)
+    setmainprop(ToGo)
   }
 
   return (
@@ -21,7 +21,7 @@ const Home = () => {
 
       <Header data={data}  mainuping={mainUping}/>
       
-      <Main   first={first}  />
+      <Main   mainprop={mainprop}  />
     </div>
   )
 }

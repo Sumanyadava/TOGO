@@ -1,13 +1,14 @@
 
 import "./SubTodoCreate.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ButtonComp from "../buttons/ButtonComp";
 import Tags from "../sub_todo/tags/Tags";
 
-const SubTodoCreate = ({todouping}) => {
+const SubTodoCreate = ({todouping,colortodouping}) => {
 
   const [valuetodo , setvaluetodo] = useState("")
   const [tasktodo , settasktodo] = useState([])
+  const [tags_color, setTags_color] = useState()
   const [tags_flag, setTags_flag] = useState({
     urgent_flag: false,
     important_flag: false
@@ -36,6 +37,8 @@ const SubTodoCreate = ({todouping}) => {
     setvaluetodo(todoword)
   }
 
+  useEffect(() => {
+  
   const handletodoclick = (e) => {
     if (valuetodo == 0) {
       alert("write something in todo")
@@ -45,7 +48,27 @@ const SubTodoCreate = ({todouping}) => {
     setvaluetodo("")
     todouping([...tasktodo, valuetodo])
     }
+
+    if (tags_flag.important_flag && tags_flag.urgent_flag == true) {
+      console.log("hehe " + tags_color)
+      setTags_color("red")
+    }else if( tags_flag.important_flag == true && tags_flag.urgent_flag == false ){
+      console.log("hehe " + tags_color)
+      setTags_color("yellow")
+    }else if( tags_flag.important_flag == false && tags_flag.urgent_flag == true ){
+      console.log("hehe " + tags_color)
+      setTags_color("orange")
+    }else if(tags_flag.important_flag == false && tags_flag.urgent_flag == false ) {
+      console.log("hehe " + tags_color)
+      setTags_color("green")
+    }
+
+    colortodouping(tags_color)
+    // console.log(tags_color + "hehe")
+
+
   }
+}, [tags_color])
 
 
   return (
@@ -81,7 +104,7 @@ const SubTodoCreate = ({todouping}) => {
         </div>
         <div className="SubTodoCreate_add">
         
-        <ButtonComp button_content="add" onClick={handletodoclick}/>
+        <ButtonComp button_content="add" onClick={handletodoclick} type="primaryButton button_medium"/>
 
         
         </div>

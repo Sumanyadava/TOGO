@@ -11,7 +11,7 @@ const Header = ({data,mainuping}) => {
   
 
 
-  const uping = (ToGo) => {
+  const headeruping = (ToGo) => {
     // console.log(ToGo)
 
     mainuping(ToGo)
@@ -25,7 +25,7 @@ const Header = ({data,mainuping}) => {
     
       <div className="header">
 
-        <SearchBar placeholder="enter placeholder"  data={data} uping={uping} />
+        <SearchBar placeholder="enter placeholder"  data={data} headeruping={headeruping} />
         
         
         

@@ -10,6 +10,7 @@ const TodoName = ({todo,data}) => {
   // code depth use one flag
   const [show , setshow] = useState(true)
   const [flag, setFlag] = useState(false)
+
   const [todolist, settodolist] = useState([])
   
 
@@ -30,8 +31,12 @@ const TodoName = ({todo,data}) => {
 
     settodolist(tasktodo)
     
+    
   }
-
+  // code dept use one updrill 
+  const colortodouping = (color_tag) => {
+    console.log(color_tag + " from todo ")
+  }
 
   return (
 
@@ -50,7 +55,7 @@ const TodoName = ({todo,data}) => {
       {/* <div className={`${show === false ? "todo_name_hidden" : "todo_name_hidden bottom"}`}> */}
       <div className={`${show === false ? "todo_name_hidden" : "todo_name_hidden bottom"}`}>
       
-      <SubTodoCreate todouping={todouping} />
+      <SubTodoCreate todouping={todouping} colortodouping={colortodouping} />
       </div>
 
       </div>
@@ -62,7 +67,7 @@ const TodoName = ({todo,data}) => {
 
         {
           todolist.map((todolistelement,index)=> (
-            <SubTodo todolistelement={todolistelement} key={index}/>
+            <SubTodo todolistelement={todolistelement} key={index} />
           ) )
         }
         

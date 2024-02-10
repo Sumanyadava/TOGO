@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Tags from "./tags/Tags";
 import "./SubTodo.css";
 
-const SubTodo = ({todolistelement}) => {
+const SubTodo = ({todolistelement,tagscolor}) => {
   
   const [Status_state,setStatus_state] = useState()
   
@@ -32,8 +32,8 @@ const SubTodo = ({todolistelement}) => {
         <p>{todolistelement}</p>
 
         <div className="Sub_todo_tags">
-        <Tags color="brown" />
-        <Tags color="blueviolet" />
+        <div style={{background:"blue"}}>s  </div>
+        
 
         </div>
 

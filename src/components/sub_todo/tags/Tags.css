@@ -45,7 +45,7 @@ tittle
 
     font-size: 1vw;
 
-    transition: 0.4s ease;
+    transition: 0.3s ease;
 
 
 }
@@ -60,7 +60,7 @@ tittle
     color: aliceblue;
     background-color: var(--primarycolor);
     /* border: none; */
-    transition: 0.3s ease-in;
+    
     
     
 }
@@ -74,7 +74,8 @@ tittle
 }
 .sec_active{
     color: aliceblue;
-    background-color: var(--secoundarycolor);
+    background-color: black;
+    padding: 0 2%;
     
 }
 
