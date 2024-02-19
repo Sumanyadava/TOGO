@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import "./Login.css";
+import {useNavigate} from 'react-router-dom'
+import axios from 'axios';
 
 const Login = () => {
-  const [Name_login, setName_login] = useState();
+  const navigate = useNavigate()
+  const [email_login, setemail_login] = useState();
   const [pass_login, setPass_login] = useState();
   const [typeS, setTypeS] = useState({
     type_pass: "password",
@@ -17,7 +20,13 @@ const Login = () => {
 
   function loginhandler(e) {
     e.preventDefault();
-    console.log(Name_login, pass_login);
+
+    // console.log(email_login, pass_login);
+    axios.post('http://localhost:3001/login',{email:email_login,pass:pass_login}).then(result => { console.log(result)
+    if(result.data === "Success") {
+      navigate('/home')
+    }
+  }).catch(err=> console.log(err))
   }
   function eyehandler() {
     if (typeS.type_pass === "password") {
@@ -45,7 +54,7 @@ const Login = () => {
     <div className="Login">
       <div className="Login_form">
         <div className="Login_form_heading">
-          <h1 className="company_name_login">ToGo: </h1>
+          <h1 className="company_Name_login">ToGo: </h1>
           <p className="developedby">
             formely developed by <a href="">Suman</a> & <a href="">Rick</a>
           </p>
@@ -60,12 +69,12 @@ const Login = () => {
             <label htmlFor="">User Name</label>
             <input
               className="inputl"
-              type="text"
+              type="email"
               name=""
               id=""
               required
-              value={Name_login}
-              onChange={(e) => setName_login(e.target.value)}
+              value={email_login}
+              onChange={(e) => setemail_login(e.target.value)}
             />
             <label htmlFor="">Password</label>
 

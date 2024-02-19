@@ -8,11 +8,20 @@ const SubTodoCreate = ({todouping,colortodouping}) => {
 
   const [valuetodo , setvaluetodo] = useState("")
   const [tasktodo , settasktodo] = useState([])
-  const [tags_color, setTags_color] = useState()
+  const [tags_color, setTags_color] = useState("")
   const [tags_flag, setTags_flag] = useState({
     urgent_flag: false,
     important_flag: false
   })
+
+  useEffect(() => {
+
+
+    console.log(colorr)
+  
+    
+  }, [tags_color])
+  
 
   const handleTags_urgent = () => {
   
@@ -47,6 +56,7 @@ const SubTodoCreate = ({todouping,colortodouping}) => {
     todouping([...tasktodo, valuetodo])
     }
 
+
     if (tags_flag.important_flag && tags_flag.urgent_flag == true) {
       setTags_color( "red")
     }else if( tags_flag.important_flag == true && tags_flag.urgent_flag == false ){
@@ -57,8 +67,9 @@ const SubTodoCreate = ({todouping,colortodouping}) => {
       setTags_color( "green")
     }
 
+
     colortodouping(tags_color)
-    console.log(tags_color + "hehe")
+    console.log(colorr + "hehe")
    
 
 

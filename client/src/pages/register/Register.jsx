@@ -1,9 +1,13 @@
-import { toBeChecked } from "@testing-library/jest-dom/matchers";
+// import { toBeChecked } from "@testing-library/jest-dom/matchers";
 import "./Register.css";
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 import React, { useState } from "react";
 
 const Register = () => {
+
+  const navigate = useNavigate();
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [pass, setPass] = useState();
@@ -19,12 +23,16 @@ const Register = () => {
     e.preventDefault();
     if (pass === cpass) {
       // pass
+      // console.log(name, email, pass, cpass, warn);
+      axios.post('http://localhost:3001/register',{name,email,pass}).then(result => console.log(result)).catch(err=> console.log(err))
       setName("");
       setEmail("");
       setPass("");
       setWarn("");
       setCpass("");
-      console.log(name, email, pass, cpass, warn);
+
+      navigate('/login')
+
     } else {
       setWarn("password is missmatching");
     }
