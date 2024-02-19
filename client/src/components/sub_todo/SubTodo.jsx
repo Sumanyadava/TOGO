@@ -2,28 +2,14 @@ import React, { useState } from "react";
 import Tags from "./tags/Tags";
 import "./SubTodo.css";
 
-const SubTodo = ({todolistelement,tagscolor}) => {
+const SubTodo = ({todolistelement,color_todo_tags}) => {
   
-  const [Status_state,setStatus_state] = useState()
+  // const [todocolor,setsettodocolor] = useState([])
+  // setsettodocolor(...todocolor,color_todo_tags)
+  // console.log(todocolor)
+
   
-  const statusHandler = (e) => {
-     let status_color = e.target.value
-
-
-    if (status_color == "Pending") {
-      setStatus_state = "red"
-    }
-    if (status_color == "Working") {
-      setStatus_state = "blue"
-    }
-    if (status_color == "Review") {
-      setStatus_state = "green"
-    }
-    if (status_color == "Done") {
-      setStatus_state = "white"
-    }
-    // console.log(setStatus_state)
-  }
+  
   return (
 
     
@@ -32,7 +18,7 @@ const SubTodo = ({todolistelement,tagscolor}) => {
         <p>{todolistelement}</p>
 
         <div className="Sub_todo_tags">
-        <div style={{background:"blue"}}>s  </div>
+        {/* <div style={{background:color_todo_tags}}>s  </div> */}
         
 
         </div>

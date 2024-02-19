@@ -1,6 +1,7 @@
 .main{
     min-height: 90vh;
     width: 90vw;
+    margin-top: 5%;
     
   
     display: flex;

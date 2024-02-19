@@ -10,6 +10,7 @@ const TodoName = ({todo,data}) => {
   // code depth use one flag
   const [show , setshow] = useState(true)
   const [flag, setFlag] = useState(false)
+  const [color_todo_tags, setColor_todo_tags] = useState([])
 
   const [todolist, settodolist] = useState([])
   
@@ -32,10 +33,13 @@ const TodoName = ({todo,data}) => {
     settodolist(tasktodo)
     
     
+    
   }
   // code dept use one updrill 
   const colortodouping = (color_tag) => {
     console.log(color_tag + " from todo ")
+    setColor_todo_tags(color_tag)
+    
   }
 
   return (
@@ -67,7 +71,7 @@ const TodoName = ({todo,data}) => {
 
         {
           todolist.map((todolistelement,index)=> (
-            <SubTodo todolistelement={todolistelement} key={index} />
+            <SubTodo todolistelement={todolistelement} key={index} /*color_todo_tags={color_todo_tags}*/ />
           ) )
         }
         

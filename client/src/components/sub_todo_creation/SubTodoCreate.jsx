@@ -37,8 +37,6 @@ const SubTodoCreate = ({todouping,colortodouping}) => {
     setvaluetodo(todoword)
   }
 
-  useEffect(() => {
-  
   const handletodoclick = (e) => {
     if (valuetodo == 0) {
       alert("write something in todo")
@@ -50,25 +48,31 @@ const SubTodoCreate = ({todouping,colortodouping}) => {
     }
 
     if (tags_flag.important_flag && tags_flag.urgent_flag == true) {
-      console.log("hehe " + tags_color)
-      setTags_color("red")
+      setTags_color( "red")
     }else if( tags_flag.important_flag == true && tags_flag.urgent_flag == false ){
-      console.log("hehe " + tags_color)
-      setTags_color("yellow")
+      setTags_color( "yellow")
     }else if( tags_flag.important_flag == false && tags_flag.urgent_flag == true ){
-      console.log("hehe " + tags_color)
-      setTags_color("orange")
+      setTags_color( "orange")
     }else if(tags_flag.important_flag == false && tags_flag.urgent_flag == false ) {
-      console.log("hehe " + tags_color)
-      setTags_color("green")
+      setTags_color( "green")
     }
 
     colortodouping(tags_color)
-    // console.log(tags_color + "hehe")
+    console.log(tags_color + "hehe")
+   
 
 
   }
-}, [tags_color])
+ 
+  
+  
+  
+
+  
+
+
+  
+  
 
 
   return (
@@ -105,6 +109,9 @@ const SubTodoCreate = ({todouping,colortodouping}) => {
         <div className="SubTodoCreate_add">
         
         <ButtonComp button_content="add" onClick={handletodoclick} type="primaryButton button_medium"/>
+
+        
+        
 
         
         </div>

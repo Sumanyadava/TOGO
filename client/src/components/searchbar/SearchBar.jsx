@@ -44,7 +44,7 @@ const SearchBar = ({ placeholder, data, headeruping }) => {
   };
 
   return (
-    <div>
+    <div >
       <div className="SearchBar">
         <input
           type="text"
