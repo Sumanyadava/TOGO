@@ -8,6 +8,7 @@ const Login = () => {
   const navigate = useNavigate()
   const [email_login, setemail_login] = useState();
   const [pass_login, setPass_login] = useState();
+  const [warn_login, setwarn_login] = useState();
   const [typeS, setTypeS] = useState({
     type_pass: "password",
     type_eyes: "fa-solid fa-eye",
@@ -21,13 +22,19 @@ const Login = () => {
   function loginhandler(e) {
     e.preventDefault();
 
-    // console.log(email_login, pass_login);
-    axios.post('http://localhost:3001/login',{email:email_login,pass:pass_login}).then(result => { console.log(result)
-    if(result.data === "Success") {
-      navigate('/home')
-    }
-  }).catch(err=> console.log(err))
+    
+    axios.post('http://localhost:5000/login',{email:email_login,pass:pass_login}).then(result => { console.log(result.data)
+    
+      navigate('/')
+    
+  }).catch(err=> {console.log(err.response.data)
+  
+    setwarn_login(err.response.data)
+  })
   }
+
+
+  
   function eyehandler() {
     if (typeS.type_pass === "password") {
       setTypeS((prev) => ({
@@ -60,13 +67,14 @@ const Login = () => {
           </p>
         </div>
 
+
         <form action="" className="Login_form_action" onSubmit={loginhandler}>
           <div className="form_head">
             <h1 className="">Login</h1>
             <p className="developedby">manage you task easily</p>
           </div>
           <div className="form_login_content">
-            <label htmlFor="">User Name</label>
+            <label htmlFor="">Email </label>
             <input
               className="inputl"
               type="email"
@@ -92,7 +100,7 @@ const Login = () => {
                 <i class={typeS.type_eyes}></i>
               </div>
             </div>
-
+            <span className="warning">{warn_login}</span>
             <a href="#" className="Login_FP">
               Forget&ensp;Password?
             </a>

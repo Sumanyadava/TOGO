@@ -1,16 +1,15 @@
 // import { toBeChecked } from "@testing-library/jest-dom/matchers";
 import "./Register.css";
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 import React, { useState } from "react";
 
 const Register = () => {
-
   const navigate = useNavigate();
   const [name, setName] = useState();
   const [email, setEmail] = useState();
-  const [pass, setPass] = useState();
+  const [passw, setPass] = useState();
   const [cpass, setCpass] = useState();
   const [warn, setWarn] = useState("");
 
@@ -21,22 +20,33 @@ const Register = () => {
 
   const signinhandler = (e) => {
     e.preventDefault();
-    if (pass === cpass) {
-      // pass
-      // console.log(name, email, pass, cpass, warn);
-      axios.post('http://localhost:3001/register',{name,email,pass}).then(result => console.log(result)).catch(err=> console.log(err))
-      setName("");
-      setEmail("");
-      setPass("");
-      setWarn("");
-      setCpass("");
+    if (passw === cpass) {
+      axios
+        .post("http://localhost:5000/signin", { name, email, passw })
+        .then((data) => {
+          console.log(data);
+          
+          setName("");
+          setEmail("");
+          setPass("");
+          setCpass("");
+          navigate("/login");
+        })
+        .catch((err) => {
+          console.log(err.response.data);
+          setWarn(err.response.data);
 
-      navigate('/login')
+          
+          
+          setPass("");
 
+          setCpass("");
+        });
+
+      // navigate("/login");
     } else {
       setWarn("password is missmatching");
     }
-    
   };
 
   function eyehandler() {
@@ -69,10 +79,14 @@ const Register = () => {
           <h1 className="company_name_login">ToGo: </h1>
           <p className="developedby">
             formely developed by{" "}
-            <a href="https://sumany.netlify.app/" target="_blank">
+            <a
+              href="https://sumany.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Suman
             </a>{" "}
-            & <a href="">Rick</a>
+            & <a href="#">Rick</a>
           </p>
         </div>
 
@@ -110,7 +124,7 @@ const Register = () => {
                 name="password"
                 id="password_ID"
                 required
-                value={pass}
+                value={passw}
                 onChange={(e) => setPass(e.target.value)}
               />
               <div className="eye" onClick={eyehandler}>
@@ -128,7 +142,7 @@ const Register = () => {
               value={cpass}
               onChange={(e) => setCpass(e.target.value)}
             />
-            <p className="warning">{warn}</p>
+            <span className="warning">{warn}</span>
           </div>
           <button type="submit" className="signin_button">
             Sign in
@@ -143,11 +157,11 @@ const Register = () => {
               required
             />
             By continuing you accept our standard{" "}
-            <a href=""> terms and conditions</a> and{" "}
-            <a href="">our privacy policy.</a>
+            <a href="#"> terms and conditions</a> and{" "}
+            <a href="#">our privacy policy.</a>
             <p className="login_redirect_contain">
               Or have an account?{" "}
-              <a href="#" className="login_redirect">
+              <a href="/login" className="login_redirect">
                 login here
               </a>
             </p>

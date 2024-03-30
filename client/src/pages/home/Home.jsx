@@ -12,7 +12,6 @@ const Home = () => {
   const [mainprop, setmainprop] = useState([])
 
   const mainUping = (ToGo) =>{
-    // console.log(ToGo)
     setmainprop(ToGo)
   }
 

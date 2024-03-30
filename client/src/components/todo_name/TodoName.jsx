@@ -24,9 +24,15 @@ const TodoName = ({todo,data}) => {
 
   }
 
-  const handletittleedit = () => {
+  const handletittleedittodo = () => {
     setFlag(!flag)
   }
+
+  const handledeletetodo = () =>{
+    console.log("Delete ")
+  }
+
+
 
   const todouping = (tasktodo) => {
 
@@ -52,7 +58,8 @@ const TodoName = ({todo,data}) => {
           <div className="todo_heading_name" contentEditable={flag}>{todo}</div>
           <div className="todo_heading_action">
             <ButtonComp button_content="i" tittle_prop="add here" onClick={handleaddtodo} type="circularButton circle_small"/>
-            <ButtonComp button_content="e" tittle_prop="edit here" onClick={handletittleedit} type="circularButton circle_small"/>
+            <ButtonComp button_content="e" tittle_prop="edit here" onClick={handletittleedittodo} type="circularButton circle_small"/>
+            <ButtonComp button_content="d" tittle_prop="edit here" onClick={handledeletetodo} type="circularButton circle_small"/>
           </div>
 
           {/* ES6 saves the day using this simple method */}

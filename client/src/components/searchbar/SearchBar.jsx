@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchIcon from "../../assets/Search_icon";
 import CrossIcon from "../../assets/cross_icon";
 import ButtonComp from "../buttons/ButtonComp";
+import axios from "axios";
 import "./SearchBar.css";
 
 const SearchBar = ({ placeholder, data, headeruping }) => {
@@ -15,9 +16,22 @@ const SearchBar = ({ placeholder, data, headeruping }) => {
 
   const HandlePlusClick = (e) => {
     headeruping([...ToGo, wordEntered])
+
     setToGo([...ToGo, wordEntered]);
-    setWordEntered("");
-    setFilteredData([]);
+    const trimwords = wordEntered.trim()
+
+    axios.post("http://localhost:5000/togo",{trimwords}).then((data) => {
+      console.log(data);
+      
+      setWordEntered("");
+      setFilteredData([]);
+    }).catch((err)=>{
+      console.log(err);
+    })
+    
+    
+
+    
     
   };
 
@@ -55,7 +69,7 @@ const SearchBar = ({ placeholder, data, headeruping }) => {
         />
 
         <div className="SearchBar_icon" onClick={handleWord}>
-          {wordEntered.length === 0 ? (
+          {wordEntered.trim().length === 0 ? (
             <SearchIcon height="60%" width="60%" />
           ) : (
             <CrossIcon height="50%" width="50%" />

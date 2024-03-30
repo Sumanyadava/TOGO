@@ -78,7 +78,7 @@
 
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
     /* background-color: antiquewhite; */
     
@@ -222,11 +222,13 @@ a{
     margin: 1%;
 }
 .warning{
-    color: red;
+    color: rgb(85, 2, 2);
     font-size: 2vh;
+    text-shadow: 0 0 8px snow;
+    
 }
 
-@media (max-width:600px) {
+@media (max-width:900px) {
     .company_name_login{
         font-size: 8vw;
     }

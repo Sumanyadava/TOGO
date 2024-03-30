@@ -1,133 +1,105 @@
-
 import "./SubTodoCreate.css";
-import React, { useEffect, useState } from "react";
-import ButtonComp from "../buttons/ButtonComp";
-import Tags from "../sub_todo/tags/Tags";
+import React, { useState } from "react";
 
-const SubTodoCreate = ({todouping,colortodouping}) => {
 
-  const [valuetodo , setvaluetodo] = useState("")
-  const [tasktodo , settasktodo] = useState([])
-  const [tags_color, setTags_color] = useState("")
+const SubTodoCreate = ({ todouping, colortodouping }) => {
+  const [inputTodo, setinputTodo] = useState("");
+  const [inputdate, setinputdate] = useState()
+  const [imp, setImp] = useState("")
+  // const [timeDiff, setTimeDiff] = useState("")
+  
+
+
+  const [tasktodo, settasktodo] = useState([]);
+  const [tags_color, setTags_color] = useState("");
   const [tags_flag, setTags_flag] = useState({
     urgent_flag: false,
-    important_flag: false
-  })
-
-  useEffect(() => {
+    important_flag: false,
+  });
 
 
-    console.log(colorr)
-  
-    
-  }, [tags_color])
+  var currentDateFormat = new Date();
+  var selectedDateFormat = new Date(inputdate);
+  var diffTime = (Math.abs(selectedDateFormat - currentDateFormat))
+  var diffDays = (Math.ceil(diffTime / (1000*60*60*24)))
   
 
-  const handleTags_urgent = () => {
+
   
-    setTags_flag(prevState => ({
-      ...prevState,urgent_flag: !prevState.urgent_flag
-    }))
-
-    
-  }
-  const handleTags_important = () => {
   
-    setTags_flag(prevState => ({
-      ...prevState,important_flag: !prevState.important_flag
-    }))
-
-    
-  }
+  
+  
+  
 
 
-  const handletodo = (e) => {
-    const todoword = e.target.value;
-    setvaluetodo(todoword)
-  }
+
+  
 
   const handletodoclick = (e) => {
-    if (valuetodo == 0) {
-      alert("write something in todo")
-    }else{
+
+    e.preventDefault()
+
+    if (inputTodo == 0 ) {
+      alert("write something in todo");
+      
+    }
+    else if (imp == "") {
+      alert("select priority")
+    }
+    else if (Number.isNaN(diffDays)){
+      alert("select your deadline ")
+    }
+    else {
+      settasktodo([...tasktodo, inputTodo]);
+      console.log(inputTodo,imp,diffDays)
+      setinputTodo("");
+      setImp("");
+      setinputdate("")
+      
+
+
+
+      todouping([...tasktodo, inputTodo]);
+    }
+
+
     
-    settasktodo([...tasktodo, valuetodo])
-    setvaluetodo("")
-    todouping([...tasktodo, valuetodo])
-    }
-
-
-    if (tags_flag.important_flag && tags_flag.urgent_flag == true) {
-      setTags_color( "red")
-    }else if( tags_flag.important_flag == true && tags_flag.urgent_flag == false ){
-      setTags_color( "yellow")
-    }else if( tags_flag.important_flag == false && tags_flag.urgent_flag == true ){
-      setTags_color( "orange")
-    }else if(tags_flag.important_flag == false && tags_flag.urgent_flag == false ) {
-      setTags_color( "green")
-    }
-
-
-    colortodouping(tags_color)
-    console.log(colorr + "hehe")
-   
-
-
-  }
- 
-  
-  
-  
-
-  
-
-
-  
-  
-
+  };
 
   return (
-    <div className="SubTodoCreate">
+    <form action="" className="SubTodoCreate" onSubmit={handletodoclick}>
       <div className="inp">
         <input
           type="text"
           placeholder="write your task"
           className="SubTodoCreate_input"
-
-          value={valuetodo}
-          onChange={handletodo}
+          value={inputTodo}
+          onChange={e => setinputTodo(e.target.value)}
         />
 
-        <input
-          type="datetime-local"
-          className="SubTodoCreate_datepicker"
-          
-          
-        />
+        <input type="datetime-local" className="SubTodoCreate_datepicker" value={inputdate} onChange={ (e) =>  setinputdate(e.target.value)}/>
       </div>
       <div className="tags_create">
         <div className="tags_create_tags">
-        <Tags tags_content="important" type={`primaryTag tags_medium ${tags_flag.important_flag ? 'sec_active' : '' }`} onClick={handleTags_important} />
           
-        <Tags tags_content="urgent"  type={`secoundaryTag tags_medium ${tags_flag.urgent_flag ? 'sec_active' : '' }`}  onClick={handleTags_urgent}/>
+          <select name="tags" id="tagsLevel" value={imp} onChange={(e) => setImp(e.target.value) } >
+            <option selected hidden > Select Priority</option>
+            <option> imp and urgent</option>
+            <option>notIimp but urgent</option>
+            <option>non imp and non urgent</option>
+            <option> imp but not urgent</option>
+          </select>
+          
 
-          <div className="deadline">
-            09:39:45
-          </div>
-          
-          
+          <div className="deadline">{diffDays} days</div>
         </div>
+
         <div className="SubTodoCreate_add">
-        
-        <ButtonComp button_content="add" onClick={handletodoclick} type="primaryButton button_medium"/>
-
-        
-        
-
-        
+          <button type="sumbit" >Add</button>
+          
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 

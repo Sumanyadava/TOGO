@@ -93,6 +93,10 @@ tittle
 
     z-index: 2;
 }
+.circularButton:focus{
+    /* background-color: #330f0f; */
+    border: 2px solid rgb(255, 46, 63);
+}
 
 .circle_large{
     height: 3vw;

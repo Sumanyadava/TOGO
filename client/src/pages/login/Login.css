@@ -91,16 +91,16 @@
 
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     flex-direction: column;
-    /* background-color: antiquewhite; */
+   
     
 }
 .Sign_in_p{
     height: fit-content;
     width: 90%;
     font-size: 2vw;
-    /* background-color: antiquewhite; */
+   
 }
 .Sign_in_a{
     height: 20%;
@@ -225,7 +225,7 @@ a{
     text-decoration:underline;
 }
 
-@media (max-width:600px) {
+@media (max-width:900px) {
     .Login{
         display: inline;
     }
